@@ -1,6 +1,8 @@
-<header class="absolute z-10 w-full">
-  <nav class="border-gray-200 bg-gray-900/20 backdrop-blur-sm">
-    <div class="grid max-w-screen-xl grid-cols-2 p-4 mx-auto md:grid-cols-3">
+<header class="absolute z-10 w-screen">
+  <nav class="w-full border-gray-200 bg-gray-900/20 backdrop-blur-sm">
+    <div
+      class="grid w-full max-w-screen-xl grid-cols-2 p-4 mx-auto md:grid-cols-3"
+    >
       <%- include('components/logo.ejs') %><%-
       include('components/user-button.ejs') %>
       <div
@@ -8,29 +10,13 @@
         id="navbar-user"
       >
         <ul
-          class="flex flex-col p-4 mt-4 font-medium border border-gray-700 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+          class="flex flex-col w-[calc(100vw-2rem)] items-center p-4 mt-4 font-medium border border-gray-700 rounded-lg md:bg-transparent md:w-auto bg-gray-900/60 md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
         >
-          <li>
-            <a
-              href="#"
-              class="block px-3 py-2 border-gray-700 rounded text-white/70 t md:hover:bg-transparent md:p-0 hover:bg-gray-700 hover:text-white hover:underline hover:underline-offset-4 hover:decoration-brand-500"
-              >Mis Cursos</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-3 py-2 border-gray-700 rounded text-white/70 t md:hover:bg-transparent md:p-0 hover:bg-gray-700 hover:text-white hover:underline hover:underline-offset-4 hover:decoration-brand-500"
-              >Catalogo</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-3 py-2 border-gray-700 rounded text-white/70 t md:hover:bg-transparent md:p-0 hover:bg-gray-700 hover:text-white hover:underline hover:underline-offset-4 hover:decoration-brand-500"
-              >Contacto</a
-            >
-          </li>
+          <%- include('components/nav-item.ejs', { text: 'Mis cursos', link:
+          '/cursos' }) %> <%- include('components/nav-item.ejs', { text:
+          'Catálogo', link: '/catalogo' }) %> <%-
+          include('components/nav-item.ejs', { text: 'Contacto', link:
+          '/contacto' }) %>
         </ul>
       </div>
     </div>
