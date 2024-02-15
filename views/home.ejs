@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('partials/head.ejs', { title: 'Home' }) %>
-<body class="relative">
+<html lang="en" class="min-h-screen">
+  <%- include('partials/head.ejs', { title: 'Home' }) %>
+  <body class="relative h-full">
     <%- include('partials/header.ejs') %>
-    <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-zinc-950 bg-[radial-gradient(#e5e7eb22_1px,transparent_1px)] [background-size:50px_50px]"
+    ></div>
     <%- include('partials/components/carrousel.ejs') %>
-    <%- include('partials/components/boton-border.ejs', { text: 'COMPRAR YA!' }) %>
-
-
-
-
-
-
+    <section class="flex flex-col pt-10 md:pt-14 gap-10">
+      <%-include('partials/components/titulo.ejs',{texto:'Continuar aprendiendo',icono:'laptop'} ) %>
+      <div class="flex justify-center items-center gap-4 flex-wrap px-3">
+        <%- include('partials/components/item-curso.ejs') %>
+        <div class="bg-gray-600 size-32"></div>
+        <div class="bg-gray-600 size-32"></div>
+        <div class="bg-gray-600 size-32"></div>
+      </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-</body>
+  </body>
 </html>
