@@ -1,14 +1,15 @@
 <div class="flex-shrink-0 w-full">
   <img
-    src="https://www.cursoemvideo.com/wp-content/uploads/2019/08/javascript.jpg"
+    src="<%= img %>"
     alt="logo de java script"
-    class="aspect-video w-full rounded-xl object-cover"/>
-    <div class="flex items-center ">
-        <h3 class="text-white font-semibold">
-            Aprende JavaScript
-        </h3>
-        <span class="bg-white/10 p-2 text-white font-semibold">
-            js
-        </span>
+    class="aspect-video w-full rounded-xl object-cover"
+  />
+  <div class="flex items-center justify-center gap-6">
+    <h3 class="text-white font-semibold "><%= titulo %></h3>
+    <div class="flex gap-2 animate-slide-in-right ">
+      <% tags.forEach(tag => { %>
+        <%- include('tag.ejs', { text: tag}) %>
+      <% }) %>
     </div>
+  </div>
 </div>
