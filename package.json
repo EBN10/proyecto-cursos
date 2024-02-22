@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i public\\css\\tailwind.css -o ./public/css/style.css",
+    "build:css": "pnpx tailwindcss -i public/css/tailwind.css -o ./public/css/style.css",
     "dev": "run-p dev:*",
-    "dev:server": "nodemon ./app.js",
-    "dev:watch-css": "npx tailwindcss -i public\\css\\tailwind.css -o ./public/css/style.css --watch"
+    "dev:server": "node --watch ./app.js",
+    "dev:watch-css": "pnpx tailwindcss -i public/css/tailwind.css -o ./public/css/style.css --watch"
   },
   "keywords": [],
   "author": "",

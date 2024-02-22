@@ -3,17 +3,15 @@
   <%- include('partials/head.ejs', { title: 'Home' }) %>
   <body class="relative h-full">
     <%- include('partials/header.ejs') %>
-    <div
-      class="absolute inset-0 -z-10 h-full w-full bg-zinc-950 bg-[radial-gradient(#e5e7eb22_1px,transparent_1px)] [background-size:50px_50px]"
-    ></div>
+    <%- include('partials/debug/tailwind-size.ejs') %>
+    <%- include('partials/background.ejs') %>
     <%- include('partials/components/carrousel.ejs') %>
-    <section class="flex flex-col pt-10 md:pt-14 gap-10">
+    <section class="flex flex-col gap-10 py-10 md:py-14">
       <%-include('partials/components/titulo.ejs',{texto:'Continuar aprendiendo',icono:'laptop'} ) %>
-      <div class="flex justify-center items-center gap-4 flex-wrap px-3">
+      <div class="container flex flex-wrap items-center justify-center gap-4 px-3 mx-auto">
         <%- include('partials/components/item-curso.ejs',{img:'https://www.codespot.org/assets/css.jpg',titulo:'Aprende CSS',tags:['#CSS','#WebDev','#Design']}) %>
         <%- include('partials/components/item-curso.ejs',{img:'https://sevima.com/wp-content/uploads/2012/08/javascript-logo.jpg',titulo:'Aprende JavaScript',tags:['#JS','#WebDev','#Design']}) %>
         <%- include('partials/components/item-curso.ejs',{img:'https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development.png',titulo:'Aprende HTML',tags:['#HTML','#WebDev','#Design']}) %>
-        <%- include('partials/components/item-curso.ejs',{img:'https://www.filepicker.io/api/file/SVFQZQAyRpqJ31f6LNGe',titulo:'Aprende React',tags:['#REACT','#WebDev','#Design']}) %>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
