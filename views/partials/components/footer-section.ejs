@@ -1,0 +1,14 @@
+<div class="w-full md:w-[200px] px-12">
+  <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+    <%= titulo %>
+  </h2>
+  <ul class="font-medium text-gray-500 dark:text-gray-400">
+    <% locals.items.forEach((item) => { %>
+      <li class="mb-4 duration-300 hover:text-white/80 hover:pl-3">
+        <a href="<%= item.link %>" class="hover:underline"
+          ><%= item.texto %></a
+        >
+      </li>
+    <% }); %>
+  </ul>
+</div>
