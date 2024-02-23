@@ -14,8 +14,4 @@ app.get("/home", (req, res) => {
   res.render("home");
 });
 
-app.listen(3000, () => {
-  console.log(
-    "El servidor esta corriendo de manera correcta en http://localhost:3000"
-  );
-});
+module.exports = app;
