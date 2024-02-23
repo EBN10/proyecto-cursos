@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build:css": "pnpx tailwindcss -i public/css/tailwind.css -o ./public/css/style.css",
+    "build": "npx tailwindcss -i public/css/tailwind.css -o ./public/css/style.css",
     "dev": "run-p dev:*",
     "dev:server": "node --watch ./dev.js",
     "dev:watch-css": "pnpx tailwindcss -i public/css/tailwind.css -o ./public/css/style.css --watch"
